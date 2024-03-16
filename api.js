@@ -8,8 +8,7 @@ function create(port, pages) {
             chunks.push(chunk);
         });
         req.on('end', () => {
-            let data = Buffer.concat(chunks);
-
+            let data = Buffer.concat(chunks).toString();
             // try to parse the data
             try {
                 data = JSON.parse(data);
