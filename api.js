@@ -22,6 +22,7 @@ function create(port, pages) {
                 page({
                     req,
                     res,
+                    method: req.method,
                     data,
                     sendJson: data => sendJson(res, data),
                     sendError: (code, message) => sendError(res, code, message)
